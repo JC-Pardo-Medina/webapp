@@ -1,16 +1,13 @@
 import flask
-from flask import Flask
+from flask import Flask,render_template
 from werkzeug.wrappers import Request, Response
 app = Flask(__name__)
 
 @app.route("/")
 
 
-def home():
-    app_main = """
-    <h1>HOLA</h1>
-    """
-    return app_main
+def index():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
